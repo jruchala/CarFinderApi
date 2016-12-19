@@ -94,9 +94,6 @@ namespace CarFinderApi.Models
                 new SqlParameter("trim", trim)).ToListAsync();
         }
 
-        // CarByYear
-        // CarByYearAndMake
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

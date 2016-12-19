@@ -485,7 +485,64 @@
             <summary>
             Get all years
             </summary>
-            <returns></returns>
+            <returns>List of all years for which cars records exist</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetMakesByYear(System.String)">
+            <summary>
+            Get Makes by year
+            </summary>
+            <param name="year"></param>
+            <returns>Returns a list of auto makers for which records exist for the entered year</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetModelByYearAndMake(System.String,System.String)">
+            <summary>
+            Get Models by year and make
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <returns>Returns a list of models for which records exist for the entered year and auto maker</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetTrimByYearMakeModel(System.String,System.String,System.String)">
+            <summary>
+            Get Trim By Year, Make and Model
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <returns>Returns a list of trim types for which records exist for the entered year and auto maker and make</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetCarsByYear(System.String)">
+            <summary>
+            Get Cars By Year
+            </summary>
+            <param name="year"></param>
+            <returns>Returns all the records of cars in a given year</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetCarsByYearAndMake(System.String,System.String)">
+            <summary>
+            Get Cars By Year and Make
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <returns>Returns all the records of cars from a given maker in a given year</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetCarsByYearMakeAndModel(System.String,System.String,System.String)">
+            <summary>
+            Get Cars By Year, Make and Model
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <param name="model"></param>
+            <returns>Returns all the records of cars of a given model from a given maker in a given year</returns>
+        </member>
+        <member name="M:CarFinderApi.Controllers.CarsController.GetCarsByYearMakeModelAndTrim(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get Cars By Year, Make, Model and Trim
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <param name="model"></param>
+            <param name="trim"></param>
+            <returns>Returns all the records of cars of a given trim package of a given model from a given maker in a given year</returns>
         </member>
     </members>
 </doc>

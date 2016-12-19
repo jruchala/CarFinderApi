@@ -51,14 +51,14 @@ namespace CarFinderApi.Models
 
         public async Task<List<string>> GetModelByYearAndMake(string year, string make)
         {
-            return await this.Database.SqlQuery<string>("GetMakesByYear @year, @make",
+            return await this.Database.SqlQuery<string>("GetModelByYearAndMake @year, @make",
                 new SqlParameter("year", year),
                 new SqlParameter("make", make)).ToListAsync();
         }
 
         public async Task<List<string>> GetTrimByYearMakeModel(string year, string make, string model)
         {
-            return await this.Database.SqlQuery<string>("GetMakesByYear @year, @make, @model",
+            return await this.Database.SqlQuery<string>("GetTrimByYearMakeModel @year, @make, @model",
                 new SqlParameter("year", year),
                 new SqlParameter("make", make),
                 new SqlParameter("model", model)).ToListAsync();
@@ -66,7 +66,7 @@ namespace CarFinderApi.Models
 
         public async Task<List<Car>> GetCarsByYear(string year)
         {
-            return await this.Database.SqlQuery<Car>("GetCarsByYearAndMake @year",
+            return await this.Database.SqlQuery<Car>("GetCarsByYear @year",
                 new SqlParameter("year", year)).ToListAsync();
         }
 
@@ -79,7 +79,7 @@ namespace CarFinderApi.Models
 
         public async Task<List<Car>> GetCarsByYearMakeAndModel(string year, string make, string model)
         {
-            return await this.Database.SqlQuery<Car>("GetCarsByYearAndMake @year, @make, @model",
+            return await this.Database.SqlQuery<Car>("GetCarsByYearMakeAndModel @year, @make, @model",
                 new SqlParameter("year", year),
                 new SqlParameter("make", make),
                 new SqlParameter("model", model)).ToListAsync();
@@ -87,7 +87,7 @@ namespace CarFinderApi.Models
 
         public async Task<List<Car>> GetCarsByYearMakeModelAndTrim(string year, string make, string model, string trim)
         {
-            return await this.Database.SqlQuery<Car>("GetCarsByYearAndMake @year, @make, @model, @trim",
+            return await this.Database.SqlQuery<Car>("GetCarsByYearMakeModelAndTrim @year, @make, @model, @trim",
                 new SqlParameter("year", year),
                 new SqlParameter("make", make),
                 new SqlParameter("model", model),
